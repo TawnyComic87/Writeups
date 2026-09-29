@@ -79,7 +79,7 @@ Nmap done: 1 IP address (1 host up) scanned in 33.34 seconds</code></pre><h3>Pri
 
 ### Capturas de Pantalla de la Sección
 
-[Captura pagina web] (./Images/page.jpg)
+![Captura pagina web](./Images/page.jpg)
 
 ---
 
