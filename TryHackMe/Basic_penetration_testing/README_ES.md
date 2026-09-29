@@ -9,7 +9,7 @@
 
 ## Imagen de la Máquina
 
-![Imagen de la Máquina](./images/machine.jpg)
+![Imagen de la Máquina](./Images/machine.jpg)
 
 ## Introducción
 
