@@ -5,6 +5,9 @@
 **Dificultad:** Fácil  
 **Sistema Operativo:** Linux  
 
+## Imagen de la Máquina
+
+![Imagen de la Máquina](./images/machine.png)
 ---
 
 ## Introduccion
@@ -48,11 +51,12 @@
 Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 </code></pre><p>Revisando la IP en un navegador podemos ver una pagina con la pagina default de Apache2</p>
 
+![Imagen de la pagina](./images/Page.jpeg)
 ---
 
 ## Enumeración Web
 
-<h3>Reconocimiento de Directorios</h3><pre><code class="language-bash">gobuster dir -u http://&lt;TARGET_IP&gt; -w /usr/share/wordlists/dirb/common.txt</code></pre><h3>Directorios Interesantes:</h3><ul><li><p>/simple (Status: 301) [Size: 313] [--&gt; &lt;TARGET_IP&gt;/simple]</p></li></ul><p>revisando la pagina en la parte inferior podemos encontrar el servicio que esta corriendo: <strong>This site is powered by CMS Made Simple version 2.2.8</strong></p><h3>Análisis de Vulnerabilidades</h3><p>Despues de una busqueda sobre la version encontramos que la version del servicio cuenta con un CVE registrado</p><h3>CVE-2019-9053 — Inyección SQL</h3><p>CVE-2019-9053 es una vulnerabilidad de inyección SQL ciega basada en tiempo que afecta a CMS Made Simple 2.2.8. Permite a un atacante no autenticado inyectar consultas SQL a través del módulo News y potencialmente extraer información sensible de la base de datos, como nombres de usuario, hashes de contraseñas y salts. La vulnerabilidad aprovecha las diferencias en los tiempos de respuesta del servidor para inferir los datos de la base de datos carácter por carácter.</p><h3>Respondiendo a las preguntas</h3><p>What's the CVE you're using against the application?</p><p><strong>CVE-2019-9053</strong></p><p>To what kind of vulnerability is the application vulnerable?</p><p><strong>SQLi</strong></p>
+<h3>Reconocimiento de Directorios</h3><pre><code class="language-bash">gobuster dir -u http://&lt;TARGET_IP&gt; -w /usr/share/wordlists/dirb/common.txt</code></pre><h3>Directorios Interesantes:</h3><ul><li><p>/simple (Status: 301) [Size: 313] [--&gt; &lt;TARGET_IP&gt;/simple]</p></li></ul><p>revisando la pagina en la parte inferior podemos encontrar el servicio que esta corriendo: <strong>This site is powered by CMS Made Simple version 2.2.8</strong></p><img src="./images/Simple.jpeg"/><h3>Análisis de Vulnerabilidades</h3><p>Despues de una busqueda sobre la version encontramos que la version del servicio cuenta con un CVE registrado</p><h3>CVE-2019-9053 — Inyección SQL</h3><p>CVE-2019-9053 es una vulnerabilidad de inyección SQL ciega basada en tiempo que afecta a CMS Made Simple 2.2.8. Permite a un atacante no autenticado inyectar consultas SQL a través del módulo News y potencialmente extraer información sensible de la base de datos, como nombres de usuario, hashes de contraseñas y salts. La vulnerabilidad aprovecha las diferencias en los tiempos de respuesta del servidor para inferir los datos de la base de datos carácter por carácter.</p><h3>Respondiendo a las preguntas</h3><p>What's the CVE you're using against the application?</p><p><strong>CVE-2019-9053</strong></p><p>To what kind of vulnerability is the application vulnerable?</p><p><strong>SQLi</strong></p>
 
 ---
 
