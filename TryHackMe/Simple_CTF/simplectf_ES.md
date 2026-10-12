@@ -78,7 +78,7 @@ G00dxxxxxxxx</code></pre><h3>Acceso Inicial Obtenido</h3><ul><li><p>Usuario: [mi
 
 ## Escalada de Privilegios
 
-<h2>Escalada de Privilegios</h2><h3>Enumeración del Sistema</h3><p><strong>Información básica del sistema:</strong></p><pre><code class="language-bash">uname -a
+<h3>Enumeración del Sistema</h3><p><strong>Información básica del sistema:</strong></p><pre><code class="language-bash">uname -a
 cat /etc/os-release
 id
 sudo -l</code></pre><p>encontramos como mas interesante lo arrojado por</p><pre><code>$ sudo -l
